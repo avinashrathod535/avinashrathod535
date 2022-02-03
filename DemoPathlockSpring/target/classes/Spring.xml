@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean id="s1" class="com.pathlock.Student" autowire="byType">
+<property name="sid" value="101"></property>
+<property name="sname" value="Avinash"></property>
+<property name="percent" value="90"></property>
+ <!--<property name="Course" ref="c1"></property>-->
+</bean>
+
+
+<bean id="T1" class="com.pathlock.Trainer">
+<constructor-arg value="Deepa"/> 
+ 
+</bean>
+
+<!--<bean id="s2" class="com.pathlock.Student">
+<constructor-arg value="102"/> 
+<constructor-arg value="Sapana"/> 
+<constructor-arg value="80"/> 
+</bean>-->
+
+<bean id="c1" class="com.pathlock.Course">
+<constructor-arg value="Java"/> 
+<constructor-arg value="400000"/> 
+</bean>
+
+
+
+
+</beans>
