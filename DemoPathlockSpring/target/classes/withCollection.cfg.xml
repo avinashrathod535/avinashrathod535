@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="q1" class="com.withCollection.Question">
+		<property name="id" value="1"></property>
+		<property name="name" value="What is Collection in Java?"></property>
+		<property name="answers">
+			<list>
+				<value>The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.</value>
+				<value>Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion,manipulation, and deletion.</value>
+				<value>Java Collection means a single unit of objects.</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
