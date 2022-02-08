@@ -14,7 +14,12 @@ public class FirstServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter out = response.getWriter();
-		out.println("Welcome to my first servlet program.");
+		//out.println("Welcome to my first servlet program.");
+		
+		String uname=request.getParameter("fname");
+		String pass=request.getParameter("pass");
+		
+		out.println("Welcome to my 2nd task of servlet program."+uname);
 	}
 
 }
