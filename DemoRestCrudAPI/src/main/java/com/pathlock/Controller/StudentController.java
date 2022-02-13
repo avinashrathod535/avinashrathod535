@@ -6,9 +6,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -37,13 +39,28 @@ public class StudentController {
 	@ResponseBody
 	@PostMapping(value = "/students")
 	public boolean addStudent(@RequestBody Student s) {
-		System.out.println("************");
+		System.out.println("******add******");
 		studentService.insertStudent(s);
 		return true;
 	}
 
-	
-	
+	@ResponseBody
+	@DeleteMapping(value = "/students/{id}")
+	public boolean deleteStudent(@PathVariable("id") int sid) {
+		System.out.println("*****Delete*******");
+		Student s1 = studentService.getStudentById(sid);
+		studentService.deleteStudent(s1);
+		return true;
+	}
+
+	@ResponseBody
+	@PutMapping(value = "/students/{sid}")
+	public boolean updateStudent(@PathVariable("sid") int sid, @RequestBody Student s) {
+		System.out.println("******Update******");
+		studentService.updateStudent(s);
+		return true;
+	}
+
 	/*
 	 * @ResponseBody
 	 * 

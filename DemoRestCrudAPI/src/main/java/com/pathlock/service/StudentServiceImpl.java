@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mysql.cj.Session;
+import com.mysql.cj.xdevapi.SessionFactory;
 import com.pathlock.Dao.StudentDao;
 import com.pathlock.Model.Student;
 
@@ -26,7 +28,7 @@ public class StudentServiceImpl implements StudentService
 	@Override
 	public boolean updateStudent(Student s) {
 		// TODO Auto-generated method stub
-		return false;
+		return sdao.updateStudent(s);
 	}
 
 	@Override
