@@ -7,15 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<FORM method="get" action="path" >
-User Name: <input type="text" name="name">
-<br>
-Password: <input type="text" name="pass">
-<br>
-
-<input type="submit" value="submit">
-</FORM>
-
+<h1>Welcome to my MVC project</h1>
 </body>
 </html>

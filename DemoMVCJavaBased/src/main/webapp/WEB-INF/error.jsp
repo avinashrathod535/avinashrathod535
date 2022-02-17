@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isErrorPage="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>First Java based Spring MVC.</h1>
-
+<h1>Error</h1>
+<%=exception.getMessage() %>
+${stud}
 </body>
 </html>
